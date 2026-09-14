@@ -1,0 +1,50 @@
+SELECT * FROM stanowiska
+WHERE nazwa LIKE '%r%';
+
+SELECT * FROM autorzy
+WHERE imie LIKE '___';
+
+SELECT * FROM pracownicy
+WHERE nazwisko LIKE '__w%';
+
+SELECT * FROM autorzy
+WHERE nazwisko LIKE '_____';
+
+SELECT * FROM ksiazki
+WHERE tytul LIKE '_i%';
+
+SELECT * FROM czytelnicy
+WHERE email LIKE '_a%';
+
+SELECT * FROM czytelnicy
+WHERE miasto LIKE '______';
+
+SELECT * FROM czytelnicy
+WHERE imie LIKE 'M%' OR imie LIKE 'A%';
+
+SELECT * FROM autorzy
+WHERE nazwisko REGEXP '^[A-C]';
+
+SELECT * FROM czytelnicy
+WHERE imie NOT REGEXP '^[AMJ]';
+
+SELECT * FROM ksiazki
+WHERE tytul REGEXP '^[N-Z]';
+
+SELECT * FROM czytelnicy
+WHERE miasto REGEXP '^P[or]';
+
+SELECT * FROM czytelnicy
+WHERE nazwisko NOT REGEXP '^[K-P]';
+
+SELECT * FROM pracownicy
+WHERE nazwisko REGEXP '[ia]$';
+
+SELECT * FROM czytelnicy
+WHERE nazwisko REGEXP '^.[^aeiouy]';
+
+SELECT * FROM pracownicy
+WHERE nazwisko REGEXP '^[PKN].w';
+
+SELECT * FROM czytelnicy
+WHERE login REGEXP '^[^a-j]';
