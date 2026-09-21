@@ -1,0 +1,11 @@
+SELECT COUNT(*) AS liczba_wierszwy FROM pracownicy;
+SELECT COUNT(*) AS liczba_pustych_peseli FROM `pracownicy` WHERE pesel IS NULL;
+SELECT COUNT(*) AS liczba_sprzedawcow FROM `pracownicy` WHERE stanowisko = 'przedawca'
+SELECT  AVG(placa)AS srednia_placa FROM `pracownicy` ;
+SELECT MAX(placa) AS maksymalna_placa FROM `pracownicy`;
+SELECT MIN(placa) AS minimalna_placa FROM `pracownicy` ;
+SELECT AVG(placa) AS srednia, MAX(placa) AS maksymalna, MIN(placa) AS maksymalna FROM `pracownicy` ;
+SELECT AVG(placa) AS srednia, MAX(placa) AS maksymalna, MIN(placa) AS minimalna FROM `pracownicy` WHERE stanowisko = "sprzedawca";
+SELECT SUM(placa) AS suma_plac FROM `pracownicy`;
+SELECT SUM(placa) AS suma_plac_spzredawcow FROM `pracowniy` WHERE stanowisko = 'spzredawca';
+SELECT AVG(cena) AS srednia_cena FROM 'produkty'
